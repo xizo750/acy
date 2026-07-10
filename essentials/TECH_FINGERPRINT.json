@@ -1,0 +1,149 @@
+{
+  "target": "claude.ai",
+  "fingerprinted_at": "2026-07-08T12:20:00Z",
+  "technology_stack": {
+    "frontend": "React SPA",
+    "api_architecture": "RESTful JSON API",
+    "auth": "Session cookies (__ssid, sessionKeyLC)",
+    "cloud_protection": "Cloudflare"
+  },
+  "api_endpoints_discovered": {
+    "organizations": [
+      "GET /api/organizations/{org_uuid}",
+      "GET /api/organizations/{org_uuid}/notification/preferences",
+      "GET /api/organizations/{org_uuid}/cowork_settings",
+      "GET /api/organizations/{org_uuid}/sync/settings",
+      "GET /api/organizations/{org_uuid}/sync/github/auth",
+      "GET /api/organizations/{org_uuid}/memory/settings",
+      "GET /api/organizations/{org_uuid}/memory",
+      "GET /api/organizations/{org_uuid}/marketplaces/list-default-marketplaces",
+      "GET /api/organizations/{org_uuid}/plugins/list-plugins",
+      "GET /api/organizations/{org_uuid}/skills/list-skills",
+      "GET /api/organizations/{org_uuid}/mcp/remote_servers",
+      "GET /api/organizations/{org_uuid}/mcp/v2/bootstrap",
+      "GET /api/organizations/{org_uuid}/projects",
+      "GET /api/organizations/{org_uuid}/projects_v2",
+      "GET /api/organizations/{org_uuid}/projects/{proj_uuid}",
+      "GET /api/organizations/{org_uuid}/projects/{proj_uuid}/accounts",
+      "GET /api/organizations/{org_uuid}/projects/{proj_uuid}/permissions",
+      "GET /api/organizations/{org_uuid}/projects/{proj_uuid}/conversations_v2",
+      "GET /api/organizations/{org_uuid}/projects/{proj_uuid}/docs",
+      "GET /api/organizations/{org_uuid}/projects/{proj_uuid}/files",
+      "GET /api/organizations/{org_uuid}/projects/{proj_uuid}/syncs",
+      "GET /api/organizations/{org_uuid}/chat_conversations_v2",
+      "GET /api/organizations/{org_uuid}/chat_conversations/{conv_uuid}",
+      "GET /api/organizations/{org_uuid}/experiences/claude_web",
+      "GET /api/organizations/{org_uuid}/overage_spend_limit",
+      "GET /api/organizations/{org_uuid}/pending_domain_claim",
+      "GET /api/organizations/{org_uuid}/prosumer_activation/tasks",
+      "GET /api/organizations/{org_uuid}/artifacts/{conv_uuid}/versions",
+      "GET /api/organizations/{org_uuid}/workspaces",
+      "GET /api/organizations/{org_uuid}/conversations",
+      "GET /api/organizations/{org_uuid}/shares",
+      "GET /api/organizations/discoverable",
+      "POST /api/organizations/{org_uuid}/projects",
+      "POST /api/organizations/{org_uuid}/projects/{proj_uuid}/sync",
+      "DELETE /api/organizations/{org_uuid}/projects",
+      "PATCH /api/organizations/{org_uuid}"
+    ],
+    "accounts": [
+      "GET /api/accounts/{account_uuid}/invites",
+      "GET /api/account_profile",
+      "PATCH /api/account_profile (405)"
+    ],
+    "bootstrap": [
+      "GET /api/bootstrap/{org_uuid}/current_user_access"
+    ],
+    "billing": [
+      "GET /api/billing/{org_uuid}/gift/purchase_eligibility"
+    ],
+    "oauth": [
+      "GET /api/oauth/organizations/{org_uuid}/oauth_tokens"
+    ],
+    "claude_code": [
+      "GET /api/claude_code/organizations/{org_uuid}/user_settings"
+    ],
+    "event_logging": [
+      "POST /api/event_logging/v2/batch"
+    ],
+    "team_trial": [
+      "GET /api/team-trial/exposure-eligible"
+    ],
+    "account": [
+      "GET /api/account/raven_eligible"
+    ]
+  },
+  "authorization_observation": "Org UUID changes return 404 (proper). Account UUID changes return 200 (no validation). No IDOR confirmed for cross-org data access. PII leakage via project accounts endpoint.",
+  "enumeration_primitive": "GET /api/accounts/{uuid}/invites returns 200 for any UUID format",
+  "_discovered_2026-07-10": {
+    "graphql_endpoints": {
+      "/graphql/search": {
+        "operation": "citySearch",
+        "ag-page-type-id": 644,
+        "service": "propertyapisearchdocker",
+        "version": "3.44.948.gl"
+      },
+      "/graphql/property": {
+        "operation": "propertyDetailsSearch",
+        "ag-page-type-id": 7
+      }
+    },
+    "geo_api_endpoints": [
+      "/api/cronos/geo/accommodations",
+      "/api/cronos/geo/hotels",
+      "/api/cronos/geo/NeighborHoods",
+      "/api/cronos/geo/LastViewProperties",
+      "/api/cronos/geo/TravelerImpression",
+      "/api/cronos/geo/events",
+      "/api/cronos/geo/nearbyFromExternalProvider",
+      "/api/cronos/geo/goodtoknow",
+      "/api/cronos/geo/faq",
+      "/api/cronos/geo/AboutPage",
+      "/api/cronos/geo/GetGeoCmsId",
+      "/api/cronos/geo/GetGeoTranslations",
+      "/api/cronos/geo/AlternativePropertyTypes",
+      "/api/cronos/geo/country/GetCountryTopCities",
+      "/api/cronos/geo/getpopularhotelsinfooter",
+      "/api/cronos/geo/gethotelsnippets"
+    ],
+    "flights_bff_endpoints": [
+      "/api/flights-bff/search/v1/flights",
+      "/api/flights-bff/search/v1/flexible-dates",
+      "/api/flights-bff/search/v1/branded-fares",
+      "/api/flights-bff/search/v1/top-routes",
+      "/api/flights-bff/search/v1/itinerary-content",
+      "/api/flights-bff/search/v1/itinerary",
+      "/api/flights-bff/search/v1/flights-route-content",
+      "/api/flights-bff/calendar/v1/prices",
+      "/api/flights-bff/ancillaries/v1/baggage",
+      "/api/flights-bff/ancillaries/v1/seats",
+      "/api/flights-bff/content/v1/location"
+    ],
+    "new_cronos_endpoints": [
+      "/api/cronos/layout/currency/getlist",
+      "/api/cronos/layout/culture/getlanguages",
+      "/api/cronos/layout/logincallback",
+      "/api/cronos/layout/getgiftcardvalue",
+      "/api/cronos/loyalty/getloyaltybanners",
+      "/api/cronos/loyalty/redirecttoappqr",
+      "/api/cronos/property/BelowFoldParams/GetSecondaryData",
+      "/api/cronos/seo/property",
+      "/api/cronos/partnermember/partnerdata"
+    ],
+    "ycs": {
+      "url": "https://ycs.agoda.com",
+      "type": "Partner IAM SPA",
+      "js_bundle": "cdn6.agoda.net/cdn-supply-iam/static/js/main.BZUS9nRd.js"
+    },
+    "city_ids": {
+      "bangkok": 9395,
+      "from_images": [
+        15903,
+        17196,
+        9360
+      ]
+    },
+    "js_bundle_count": 23,
+    "total_js_size_mb": "~12"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "014092cb4f83be4f": {
+    "callback_url": "014092cb4f83be4f.oast.interactsh.com",
+    "correlation_id": "ai_ssrf_sandbox_2",
+    "created_at": "2026-07-03T16:18:25.796483+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  },
+  "38005f231bfe57b1": {
+    "callback_url": "38005f231bfe57b1.oast.interactsh.com",
+    "correlation_id": "ai_data_exfil_1",
+    "created_at": "2026-07-03T16:18:55.928040+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  },
+  "8dd13a7e4e765f87": {
+    "callback_url": "8dd13a7e4e765f87.oast.interactsh.com",
+    "correlation_id": "ai_ssrf_sandbox_3",
+    "created_at": "2026-07-03T16:18:35.855420+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  },
+  "98bc3356777c88c6": {
+    "callback_url": "98bc3356777c88c6.oast.interactsh.com",
+    "correlation_id": "ssrf_sandbox_pokeeai_1",
+    "created_at": "2026-07-03T17:46:09.568937+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  },
+  "_meta": {
+    "created": "2026-07-03T00:00:00Z",
+    "description": "oc v3.3 OAST callback registry \u2014 tracks blind vulnerability probe tokens",
+    "managed_by": "mcp/oast_manager.py",
+    "version": "1.0"
+  },
+  "a902839791c792f9": {
+    "callback_url": "a902839791c792f9.oast.interactsh.com",
+    "correlation_id": "ai_data_exfil_2",
+    "created_at": "2026-07-03T16:19:05.959281+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  },
+  "c6d2212af368d63e": {
+    "callback_url": "c6d2212af368d63e.oast.interactsh.com",
+    "correlation_id": "ssrf_sandbox_ai_pokee",
+    "created_at": "2026-07-03T16:03:55.250849+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  },
+  "eeb0d518f121a49e": {
+    "callback_url": "eeb0d518f121a49e.oast.interactsh.com",
+    "correlation_id": "coinhako_localstorage_exfil",
+    "created_at": "2026-07-09T10:10:19.113939+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  },
+  "f026a00477049995": {
+    "callback_url": "f026a00477049995.oast.interactsh.com",
+    "correlation_id": "ai_ssrf_sandbox_1",
+    "created_at": "2026-07-03T16:18:15.762948+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  },
+  "f59bf7f8ad2bc86a": {
+    "callback_url": "f59bf7f8ad2bc86a.oast.interactsh.com",
+    "correlation_id": "ai_ssrf_sandbox_4",
+    "created_at": "2026-07-03T16:18:45.896760+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  },
+  "faf51bf58015b7d2": {
+    "callback_url": "faf51bf58015b7d2.oast.interactsh.com",
+    "correlation_id": "coinhako_exfil_poc",
+    "created_at": "2026-07-09T10:16:03.273221+00:00",
+    "interactions": [],
+    "last_polled_at": null,
+    "status": "pending",
+    "triggered": false
+  }
+}

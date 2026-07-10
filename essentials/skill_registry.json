@@ -1,0 +1,169 @@
+{
+  "version": "3.0",
+  "updated": "2026-07-01T00:00:00Z",
+  "architecture": "3-file per skill: DISCOVERY, HUNT, REPRODUCE",
+  "skills": [
+    {
+      "base": "SKILL-RECON",
+      "name": "Reconnaissance & Discovery",
+      "files": {
+        "discovery": "SKILL-RECON-DISCOVERY.md",
+        "hunt": "SKILL-RECON-HUNT.md",
+        "reproduce": "SKILL-RECON-REPRODUCE.md"
+      },
+      "phases": [0, 36, 37, 39, 43],
+      "vuln_classes": ["reconnaissance", "subdomain-takeover", "dependency-confusion", "info-disclosure"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Systematic target discovery, enumeration, and initial surface mapping — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-INTEL",
+      "name": "JavaScript Intelligence & Application Understanding",
+      "files": {
+        "discovery": "SKILL-INTEL-DISCOVERY.md",
+        "hunt": "SKILL-INTEL-HUNT.md",
+        "reproduce": "SKILL-INTEL-REPRODUCE.md"
+      },
+      "phases": [0, 1],
+      "vuln_classes": ["js-intel", "surface-mapping", "app-understanding"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Deep analysis of JS files to reveal hidden endpoints, auth logic, and client-side vulnerabilities — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-INJECTION",
+      "name": "Injection-Based Vulnerabilities",
+      "files": {
+        "discovery": "SKILL-INJECTION-DISCOVERY.md",
+        "hunt": "SKILL-INJECTION-HUNT.md",
+        "reproduce": "SKILL-INJECTION-REPRODUCE.md"
+      },
+      "phases": [3, 4, 7, 8, 9, 10, 16, 18, 19, 22, 23, 24, 31, 32, 38, 40, 41],
+      "vuln_classes": ["sqli", "nosqli", "ssrf", "xxe", "ssti", "cmdi", "deserialization", "lfi", "rfi", "smuggling", "cache-poisoning", "cache-deception", "hpp", "graphql", "crlf", "ldap", "xpath"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Server-side injection vulnerability discovery, exploitation, and chaining — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-AUTH",
+      "name": "Authentication & Authorization Vulnerabilities",
+      "files": {
+        "discovery": "SKILL-AUTH-DISCOVERY.md",
+        "hunt": "SKILL-AUTH-HUNT.md",
+        "reproduce": "SKILL-AUTH-REPRODUCE.md"
+      },
+      "phases": [11, 12, 13, 14, 15, 34],
+      "vuln_classes": ["idor", "access-control", "auth-bypass", "session-mgmt", "jwt", "oauth", "api-versioning"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Identity, authorization, and session management vulnerability discovery — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-CLIENTSIDE",
+      "name": "Client-Side Vulnerabilities",
+      "files": {
+        "discovery": "SKILL-CLIENTSIDE-DISCOVERY.md",
+        "hunt": "SKILL-CLIENTSIDE-HUNT.md",
+        "reproduce": "SKILL-CLIENTSIDE-REPRODUCE.md"
+      },
+      "phases": [5, 6, 17, 20, 21, 25, 29, 30, 33],
+      "vuln_classes": ["xss", "csrf", "file-upload", "open-redirect", "clickjacking", "cors", "prototype-pollution", "dom-clobbering", "websocket", "postmessage", "service-worker"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Browser-based and client-side vulnerability discovery and exploitation — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-LOGIC",
+      "name": "Business Logic & State Manipulation",
+      "files": {
+        "discovery": "SKILL-LOGIC-DISCOVERY.md",
+        "hunt": "SKILL-LOGIC-HUNT.md",
+        "reproduce": "SKILL-LOGIC-REPRODUCE.md"
+      },
+      "phases": [26, 27, 28, 35],
+      "vuln_classes": ["business-logic", "race-condition", "mass-assignment", "redos"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Logic flaw discovery, state machine abuse, and timing-based attacks — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-INFODISCLOSURE",
+      "name": "Information Disclosure & Data Exposure",
+      "files": {
+        "discovery": "SKILL-INFODISCLOSURE-DISCOVERY.md",
+        "hunt": "SKILL-INFODISCLOSURE-HUNT.md",
+        "reproduce": "SKILL-INFODISCLOSURE-REPRODUCE.md"
+      },
+      "phases": [39],
+      "vuln_classes": ["info-disclosure", "config-leak", "secret-exposure", "infrastructure-leak"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Systematic discovery of sensitive information — 10 verified patterns (P1-P10) — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-DEVOPS",
+      "name": "CI/CD Pipeline & Container Security",
+      "files": {
+        "discovery": "SKILL-DEVOPS-DISCOVERY.md",
+        "hunt": "SKILL-DEVOPS-HUNT.md",
+        "reproduce": "SKILL-DEVOPS-REPRODUCE.md"
+      },
+      "phases": [46],
+      "vuln_classes": ["ci-cd-injection", "container-escape", "workflow-injection", "runner-hardening-bypass", "build-poisoning"],
+      "status": "active",
+      "version": "3.0",
+      "description": "CI/CD pipeline, container, and DevOps infrastructure security testing — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-CHAIN",
+      "name": "Attack Chain Execution & Multi-Class Escalation",
+      "files": {
+        "discovery": "SKILL-CHAIN-DISCOVERY.md",
+        "hunt": "SKILL-CHAIN-HUNT.md",
+        "reproduce": "SKILL-CHAIN-REPRODUCE.md"
+      },
+      "phases": [42],
+      "vuln_classes": ["chain"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Systematic chaining of confirmed findings into higher-severity impacts — 10 pre-built chain recipes — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-REPORT",
+      "name": "PoC Development & Report Writing",
+      "files": {
+        "discovery": "SKILL-REPORT-DISCOVERY.md",
+        "hunt": "SKILL-REPORT-HUNT.md",
+        "reproduce": "SKILL-REPORT-REPRODUCE.md"
+      },
+      "phases": [44],
+      "vuln_classes": ["reporting", "poc", "triage"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Clean reproducible PoC creation, impact assessment, and professional reporting — 3 sub-phase files"
+    },
+    {
+      "base": "SKILL-AI",
+      "name": "AI/LLM Security Vulnerabilities",
+      "files": {
+        "discovery": "SKILL-AI-DISCOVERY.md",
+        "hunt": "SKILL-AI-HUNT.md",
+        "reproduce": "SKILL-AI-REPRODUCE.md"
+      },
+      "phases": [47],
+      "vuln_classes": ["prompt-injection", "mcp-tool-abuse", "model-output-handling", "training-data-poisoning", "rag-injection", "agent-hijacking", "system-prompt-extraction", "excessive-agency", "model-dos"],
+      "status": "active",
+      "version": "3.0",
+      "description": "Security testing of AI/LLM-powered features, agents, and RAG pipelines — 7 attack patterns — 3 sub-phase files"
+    }
+  ],
+  "metadata": {
+    "total_skill_bases": 11,
+    "total_skill_files": 33,
+    "total_phases": 48,
+    "vulnerability_classes_covered": 60,
+    "file_pattern": "SKILL-{BASE}-{DISCOVERY|HUNT|REPRODUCE}.md",
+    "cross_cutting_skills": ["SKILL-INFODISCLOSURE", "SKILL-CHAIN", "SKILL-REPORT"]
+  }
+}
