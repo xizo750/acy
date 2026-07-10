@@ -1,0 +1,93 @@
+{
+  "recordedfuture_com": {
+    "scanned_at": "2026-07-03T08:08:00Z",
+    "technologies": [
+      {
+        "tech": "Elastic APM Server",
+        "version": "9.2.3",
+        "cvss_max": 0,
+        "status": "no_critical_cves",
+        "notes": "Version 9.2.3 is recent. No critical remote CVEs found."
+      },
+      {
+        "tech": "Jetty (behind Cloudflare)",
+        "version": "unknown",
+        "cvss_max": 7.7,
+        "status": "version_unknown",
+        "notes": "CVE-2025-5115 (CVSS 7.7) - HTTP/2 RST_STREAM DoS ≤12.0.24. Version obscured."
+      },
+      {
+        "tech": "Adobe Experience Manager (AEM)",
+        "version": "unknown",
+        "cvss_max": 10.0,
+        "status": "not_vulnerable",
+        "notes": "CVE-2025-54253 (CVSS 10.0) - Struts2 DevMode RCE. /adminui/debug NOT found. Locked down."
+      }
+    ]
+  },
+  "agoda_com": {
+    "scanned_at": "2026-07-10T18:45:00Z",
+    "technologies": [
+      {
+        "tech": "Yoast SEO",
+        "version": "27.9",
+        "cvss_max": 6.4,
+        "status": "needs_auth_test",
+        "affected_host": "wpagoda.wp.agoda.com",
+        "notes": "CVE-2026-3427 (CVSS 6.4): Stored XSS via jsonText block attribute in Yoast <= 27.1.1. Version 27.9 is technically vulnerable in terms of version range, but REST API is authenticated. Requires Contributor+ level access. Confirm via admin-ajax.php with valid cookies.",
+        "exploit_available": false,
+        "urls": ["https://cvefeed.io/vuln/detail/CVE-2026-3427"]
+      },
+      {
+        "tech": "Yoast SEO",
+        "version": "28.0",
+        "cvss_max": 0,
+        "status": "patched",
+        "affected_host": "press-prd.wp.agoda.com",
+        "notes": "Version 28.0 confirmed via categories API yoast_head output. CVE-2026-3427 fixed at >27.1.1, CVE-2026-1293 fixed at 26.9. No known exploitable CVEs at this version.",
+        "exploit_available": false,
+        "urls": []
+      },
+      {
+        "tech": "Elementor",
+        "version": "4.1.4",
+        "cvss_max": 0,
+        "status": "patched",
+        "affected_host": "press-prd.wp.agoda.com",
+        "notes": "Version 4.1.4 confirmed via elementorFrontendConfig JS object. CVE-2026-57619 (Sensitive Data Exposure) fixed exactly at 4.1.4. CVE-2026-49782 (Broken Access Control) fixed at 4.1.1. No known exploitable CVEs for 4.1.4.",
+        "exploit_available": false,
+        "urls": ["https://cvefeed.io/vuln/detail/CVE-2026-57619"]
+      },
+      {
+        "tech": "Elementor Pro",
+        "version": "20250513 (build)",
+        "cvss_max": 0,
+        "status": "unknown",
+        "affected_host": "press-prd.wp.agoda.com",
+        "notes": "Elementor Pro build date 20250513. Elementor Pro REST API exposed (/elementor-pro/v1/) but all endpoints require auth. No version number found in JS. Likely recent.",
+        "exploit_available": false,
+        "urls": []
+      },
+      {
+        "tech": "Gravity Forms",
+        "version": "unknown",
+        "cvss_max": 9.8,
+        "status": "need_version",
+        "affected_host": "partnerhub.agoda.com",
+        "notes": "CVE-2025-12352 (CVSS 9.8): Unauthenticated arbitrary file upload/RCE <= 2.9.20. CVE-2026-48866 (CVSS 9.6): Path traversal/file deletion <= 2.10.0.1. Behind Cloudflare challenge — cannot probe directly. Try via Playwright or alternative access method.",
+        "exploit_available": true,
+        "urls": ["https://zeropath.com/blog/gravity-forms-cve-2025-12352-summary"]
+      },
+      {
+        "tech": "All in One SEO Pack",
+        "version": "4.9.9",
+        "cvss_max": 5.4,
+        "status": "likely_patched",
+        "affected_host": "partnerhub.agoda.com",
+        "notes": "CVE-2025-67950 (CVSS 8.5): Blind SQLi <= 4.9.1. CVE-2025-58650 (CVSS 5.4): Broken access control <= 4.8.7.1. Version 4.9.9 is past both fix versions. Behind Cloudflare challenge.",
+        "exploit_available": false,
+        "urls": []
+      }
+    ]
+  }
+}
