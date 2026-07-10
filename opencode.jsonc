@@ -1,0 +1,40 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "firefox-devtools": {
+      "type": "local",
+      "command": ["npx", "firefox-devtools-mcp", "--connectExisting", "--marionettePort", "2828", "--enableScript"],
+      "enabled": true
+    },
+    "kali-mcp": {
+      "type": "local",
+      "command": ["mcp-server", "--server", "http://127.0.0.1:9999/"],
+      "environment": {
+        "KALI_TOOLS_PATH": "/usr/bin:/usr/sbin:/usr/local/bin"
+      },
+      "enabled": true
+    },
+    "burp": {
+      "type": "local",
+      "command": ["/usr/bin/java", "-jar", "/home/xzizo/mcp-proxy.jar", "--sse-url", "http://127.0.0.1:9876/"],
+      "environment": {
+        "BURP_PROXY_URL": "http://127.0.0.1:8080"
+      },
+      "enabled": false
+    },
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "@playwright/mcp@latest", "--browser", "chromium", "--no-sandbox", "--executable-path", "/home/xzizo/.cache/ms-playwright/chromium-1228/chrome-linux64/chrome"],
+      "enabled": true
+    },
+    "oc-engines": {
+      "type": "local",
+      "command": ["python3", "mcp/mcp_server.py"],
+      "enabled": true,
+      "description": "oc v3.3 Automation Engines — OAST polling, DOM structural analysis, recon saliency filtering, payload mutation"
+    }
+  },
+  "skills": {
+    "paths": [".opencode/skills"]
+  }
+}
